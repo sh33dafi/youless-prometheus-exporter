@@ -1,3 +1,4 @@
+const PREFIX = process.env.PREFIX || '';
 const LOG_LEVEL = process.env.LOG_LEVEL || 'info';
 const YOULESS_SERVER = process.env.YOULESS_SERVER || 'http://youless';
 const { Counter, Gauge, register } = require('prom-client');
@@ -30,7 +31,7 @@ const currentPowerConsumption = new Gauge({
     help: 'Current watt consumption',
 });
 
-fastify.get('/metrics', async () => {
+fastify.get(`${PREFIX}/metrics`, async () => {
     const youlessEntry = await axios.get(`${YOULESS_SERVER}/e`).then((response) => response.data[0]);
     consumptionTotal.reset();
     consumptionTotal.inc({tariff: 'low'}, youlessEntry.p1);
