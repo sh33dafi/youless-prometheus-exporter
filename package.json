@@ -4,6 +4,7 @@
   "description": "Phrometheus exporter for youless",
   "main": "src/main.js",
   "scripts": {
+    "start": "node src/main",
     "test": "test"
   },
   "repository": {
@@ -22,6 +23,8 @@
   },
   "homepage": "https://github.com/sh33dafi/youless-prometheus-exporter#readme",
   "dependencies": {
-    "fastify": "^3.12.0"
+    "axios": "^0.21.1",
+    "fastify": "^3.12.0",
+    "prom-client": "^13.1.0"
   }
 }

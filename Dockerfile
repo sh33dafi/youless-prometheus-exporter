@@ -11,6 +11,7 @@ RUN npm ci --only=production
 
 # RUN apk add dumb-init
 # CMD ["dumb-init", "node", "server.js"]
-EXPOSE 3000
+EXPOSE 9092
+
 USER node
 CMD ["dumb-init", "node", "src/main"]
