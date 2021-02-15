@@ -1,0 +1,27 @@
+{
+  "name": "youless-prometheus-exporter",
+  "version": "1.0.0",
+  "description": "Phrometheus exporter for youless",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sh33dafi/youless-prometheus-exporter.git"
+  },
+  "keywords": [
+    "prometheus",
+    "exporter",
+    "youless"
+  ],
+  "author": "Yannick Houbrix",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sh33dafi/youless-prometheus-exporter/issues"
+  },
+  "homepage": "https://github.com/sh33dafi/youless-prometheus-exporter#readme",
+  "dependencies": {
+    "fastify": "^3.12.0"
+  }
+}
